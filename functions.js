@@ -3,10 +3,8 @@ const greeting = document.querySelector('#greeting');
 
 export let hellos = ['Hello', 'Bonjour', 'Hola', 'Ciao', 'Konnichiwa', 'Guten Tag', 'Asalaam Alaikum', 'Shikamoo', 'Yassas', 'Namaste', 'Shalom', 'Aloha', 'Barev', 'Marhaba', 'Zdravo', 'Moni', 'Hallo', 'Geia'];
 
-
 export function showGreeting(){ setInterval(() => {
   const randomGreeting = hellos[Math.round(Math.random() * hellos.length)];
-  console.log(randomGreeting);
   const greet = `
       <h1>${randomGreeting}</h1>
     `
