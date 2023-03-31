@@ -1,8 +1,3 @@
-const switched = document.querySelector("#switch");
-const change = document.querySelector("#change");
-const offOn = () => {
-  off.classList.toggle('on');
-  on.classList.toggle('off');
-}
+import { toggleBtn } from "./functions.js";
 
-switched.addEventListener('click', offOn);
+toggleBtn();
