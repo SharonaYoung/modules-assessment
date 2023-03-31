@@ -1,16 +1,17 @@
 // function 1: display random greeting
 const greeting = document.querySelector('#greeting');
 
-export let hellos = ['Hello', 'Bonjour', 'Hola', 'Ciao', 'Konnichiwa', 'Guten Tag', 'Asalaam Alaikum', 'Shikamoo', 'Yassas', 'Namaste', 'Shalom'];
+export let hellos = ['Hello', 'Bonjour', 'Hola', 'Ciao', 'Konnichiwa', 'Guten Tag', 'Asalaam Alaikum', 'Shikamoo', 'Yassas', 'Namaste', 'Shalom', 'Aloha', 'Barev', 'Marhaba', 'Zdravo', 'Moni', 'Hallo', 'Geia'];
 
-const randomGreeting = hellos[Math.floor(Math.random() * 
-    hellos.length)];
-  
-export const showGreeting = () => {
+
+export function showGreeting(){ setInterval(() => {
+  const randomGreeting = hellos[Math.round(Math.random() * hellos.length)];
+  console.log(randomGreeting);
   const greet = `
-    <h1>${randomGreeting}</h1>
-  `
-  greeting.innerHTML = greet;
+      <h1>${randomGreeting}</h1>
+    `
+    greeting.innerHTML = greet;
+  }, 2000);
 }
 
 // Function 2: toggle on off button
